@@ -23,4 +23,12 @@ export class ProductsComponent implements OnInit{
     ]
   }
 
+  handleDelete(product: any){
+    let v = confirm('etes-vous sure de vouloir supprimer ?')
+    if (v == true){
+      this.products = this.products.filter(p => p.id != product.id)
+    }
+  }
+
+
 }
